@@ -23,12 +23,25 @@ local defaults = {
       alt = { "FIXME", "BUG", "FIXIT", "ISSUE" }, -- a set of other keywords that all map to this FIX keywords
       -- signs = false, -- configure signs for some keywords individually
     },
-    TODO = { icon = " ", color = "info" },
-    HACK = { icon = " ", color = "warning" },
-    WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
-    PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
-    NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
-    TEST = { icon = "⏲ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
+        --     TODO = { icon = " ", color = "info" },
+        --     HACK = { icon = " ", color = "warning" },
+        --     WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
+        --     PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
+        --     NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
+        --     TEST = { icon = "⏲ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
+        WORKING = { icon = " ", color = "#6bddb7", alt = { "performing", "performant", "working" } },
+        NOTE = { icon = " ", color = "#98C379", alt = { "note" } },
+        TODO = { icon = " ", color = "#FF8C00", alt = {"todo"} },
+        BUG = { icon = " ", color = "#DC143C", alt = { "bug" } },
+        CAUTION = { icon = "󰒡 ", color = "#F3AA06", alt = { "WARNING", "XXX", "caution", "warn" } },
+        DESC = { icon = "󰍪 ", color = "#24A3FF", alt = { "desc" } },
+        THROWERROR = { icon = " ", color = "#fb607f", alt = { "throwError", "error" } },
+        STEP = { icon = "󰓗 ", color = "#59E4FF", alt = { "step" } },
+        FALLBACK = { icon = " ", color = "#42BCFF", alt = { "fallback" } },
+        HACK = { icon = " ", color = "#B793F9", alt = { "hack", "workaround" } },
+        TEST = { icon = " ", color = "#50FA7B", alt = { "testing", "test", "tested", "passed", "failed" } },
+        CONSTRAINT = { icon = " ", color = "#C1A398", alt = {"constraint"} },
+
   },
   gui_style = {
     fg = "NONE", -- The gui style to use for the fg highlight group.
@@ -57,12 +70,19 @@ local defaults = {
   -- list of named colors where we try to extract the guifg from the
   -- list of hilight groups or use the hex color if hl not found as a fallback
   colors = {
-    error = { "DiagnosticError", "ErrorMsg", "#DC2626" },
-    warning = { "DiagnosticWarn", "WarningMsg", "#FBBF24" },
-    info = { "DiagnosticInfo", "#2563EB" },
-    hint = { "DiagnosticHint", "#10B981" },
-    default = { "Identifier", "#7C3AED" },
-    test = { "Identifier", "#FF00FF" },
+        --     error = { "DiagnosticError", "ErrorMsg", "#DC2626" },
+        --     warning = { "DiagnosticWarn", "WarningMsg", "#FBBF24" },
+        --     info = { "DiagnosticInfo", "#2563EB" },
+        --     hint = { "DiagnosticHint", "#10B981" },
+        --     default = { "Identifier", "#7C3AED" },
+        --     test = { "Identifier", "#FF00FF" },
+        error = { "DiagnosticError", "ErrorMsg", "#DC2626" },
+        warning = { "DiagnosticWarn", "WarningMsg", "#FBBF24" },
+        info = { "DiagnosticInfo", "#2563EB" },
+        hint = { "DiagnosticHint", "#10B981" },
+        default = { "Identifier", "#7C3AED" },
+        test = { "Identifier", "#FF00FF" },
+
   },
   search = {
     command = "rg",
